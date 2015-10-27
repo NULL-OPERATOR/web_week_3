@@ -15,12 +15,13 @@ get '/random-cat' do
 end
 
 
-get '/named-cat' do
+post '/named-cat' do
   p params
   @name = params[:name]
   erb(:index)
 end
 
-post '/my-handling-form-page' do
-  "Hello World"
+
+get '/form-cat' do
+  erb(:form)
 end
